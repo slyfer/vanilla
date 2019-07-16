@@ -39,5 +39,9 @@ spring:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
 
+app:
+  jwt-secret: JWTSuperSecretKey
+  jwt-expiration-in-ms: 43200000
+
 server:
   port: 8080
