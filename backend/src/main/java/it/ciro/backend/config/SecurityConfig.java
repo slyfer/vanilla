@@ -1,6 +1,9 @@
 package it.ciro.backend.config;
 
 import it.ciro.backend.security.CustomUserDetailsService;
+import it.ciro.backend.security.JwtAuthenticationEntryPoint;
+import it.ciro.backend.security.JwtAuthenticationFilter;
+import it.ciro.backend.security.JwtTokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

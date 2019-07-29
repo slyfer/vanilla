@@ -1,8 +1,9 @@
-package it.ciro.backend.config;
+package it.ciro.backend.security;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import it.ciro.backend.AppProperties;
+import it.ciro.backend.security.JwtTokenContent;
 import it.ciro.backend.security.UserPrincipal;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;

@@ -1,22 +1,19 @@
-package it.ciro.backend.config;
+package it.ciro.backend.security;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-import java.time.LocalDate;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@ToString
 public class JwtAuthenticationResponse {
 
     private String accessToken;
     private String tokenType = "Bearer";
-    private String email;
-    private LocalDate subscriptionEndDate;
-
-    public JwtAuthenticationResponse() {
-        //used for the json (de)serialization
-    }
 
     public JwtAuthenticationResponse(String accessToken) {
         this.accessToken = accessToken;

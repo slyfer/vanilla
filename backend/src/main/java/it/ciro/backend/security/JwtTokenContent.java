@@ -1,4 +1,4 @@
-package it.ciro.backend.config;
+package it.ciro.backend.security;
 
 import lombok.Getter;
 import lombok.Setter;
