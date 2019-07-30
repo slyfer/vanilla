@@ -11,7 +11,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-    }).compileComponents();
+    }).overrideTemplate(AppComponent, '<h1>Welcome to frontend!</h1>')
+      .compileComponents();
   }));
 
   it('should create the app', () => {
