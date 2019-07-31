@@ -1,0 +1,16 @@
+<mat-card>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()" *ngIf="!logged">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input type="text" name="username" matInput formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password" name="password" matInput formControlName="password">
+    </mat-form-field>
+
+      <button mat-raised-button color="primary" type="button" (click)="submit()">Login</button>
+  </form>
+  <h3 *ngIf="logged">You are logged</h3>
+</mat-card>

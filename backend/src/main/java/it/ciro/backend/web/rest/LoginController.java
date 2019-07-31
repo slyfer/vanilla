@@ -6,7 +6,6 @@ import it.ciro.backend.security.LoginRequest;
 import it.ciro.backend.security.SecurityComponent;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -40,10 +39,8 @@ public class LoginController {
         this.securityComponent = securityComponent;
     }
 
-    @PreAuthorize("isAnonymous()")
     @PostMapping("/signin")
-    public ResponseEntity<JwtAuthenticationResponse> authenticateUser(@RequestBody final
-                                                                      @Valid LoginRequest loginRequest) {
+    public ResponseEntity<JwtAuthenticationResponse> authenticateUser(@RequestBody @Valid final LoginRequest loginRequest) {
         final Authentication authentication = authenticationManager.authenticate(
             new UsernamePasswordAuthenticationToken(
                 loginRequest.getUsername().toLowerCase(), loginRequest.getPassword()));
