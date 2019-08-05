@@ -29,6 +29,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { NgModule } from '@angular/core';
   bootstrap: [],
   exports: [
     BrowserAnimationsModule,
+    LayoutModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
