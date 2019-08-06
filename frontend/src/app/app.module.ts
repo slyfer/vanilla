@@ -10,13 +10,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SideNavLayoutComponent } from './side-nav-layout/side-nav-layout.component';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    SideNavLayoutComponent
+    SideNavLayoutComponent,
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { SideNavLayoutComponent } from './side-nav-layout/side-nav-layout.compon
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LoginDialogComponent]
 })
 export class AppModule {
 }
